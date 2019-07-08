@@ -1,4 +1,10 @@
-function main() {}
+// main function of the program
+function main() {
+  var test_cases = prepareTestCases();
+
+  // now run each test case through a test function
+  test_cases.forEach(runTest);
+}
 
 function prepareTestCases() {
   var test_cases = [];
