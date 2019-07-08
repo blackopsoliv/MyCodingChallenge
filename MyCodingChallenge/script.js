@@ -111,3 +111,6 @@ function order(jobs, depth) {
 
   return ordered;
 }
+
+// entry point of the program
+main();
