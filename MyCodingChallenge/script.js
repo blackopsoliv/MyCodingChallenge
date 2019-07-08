@@ -39,4 +39,26 @@ function prepareTestCases() {
   return test_cases;
 }
 
-function runTest() {}
+function runTest() {
+  // order the test input
+  var result = order(item.input);
+
+  //  log the results (to the console for now)
+  var log_msg = "Test case " + index + ": ";
+  if (result.join() === item.expectedOutput.join()) {
+    log_msg += "PASS";
+  } else {
+    log_msg += "FAIL";
+  }
+  log_msg +=
+    " (" +
+    item.input.join() +
+    ") => (" +
+    result.join() +
+    ") =? (" +
+    item.expectedOutput.join() +
+    ")";
+  console.log(log_msg);
+}
+
+function order(jobs, depth) {}
